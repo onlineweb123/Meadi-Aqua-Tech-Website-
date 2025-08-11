@@ -7,225 +7,522 @@
   
   
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Relax To Order Delivery Service">
-  <meta name="keywords" content="RO, Water Purifier, Service, Cuddalore, Meadi Aqua Tech, RO Machine">
-  <meta name="author" content="Meadi Aqua Tech">
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <title>Relax to Order</title>
+
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
+<meta name="google-site-verification" content="tRgrNV5W-AwBZ2LBDmUq6GoTuzfjp_eoZR4F0xBvJT0" />
+
+
+  <meta name="description" content="Relax to Order - உங்கள் வீட்டிலிருந்து ஓரளவுக்கு கூட வெளியே போகாமல் பொருட்களை Order செய்யும் வசதி. Shop-க்கு போன மடையாதீங்க. Just relax and order now!">
+<meta name="keywords" content="Relax to Order, Order App, Smart Delivery, Tamil Nadu Delivery, Nearby Shop Delivery, Home Delivery, Order Now">
+<meta name="author" content="Mathavan">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      background: linear-gradient(to right, #e1f5fe, #e8f5e9);
     }
 
     header {
-      background-color: #0077b6;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero {
-      background-color: #caf0f8;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .hero a {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0077b6;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .products {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .product {
-      background: white;
-      width: 280px;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    footer {
-      background-color: #023e8a;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    #whatsappButton {
-      position: fixed;
-      bottom: 120px;
-      right: 20px;
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      transition: transform 0.15s cubic-bezier(0.25, 1.5, 0.5, 1);
-      cursor: grab;
-      touch-action: none;
+      background: rgba(0, 150, 136, 0.95);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
-    #whatsappButton img {
-      width: 60px;
-      height: 60px;
+    .menu-btn {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    main {
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .petrol-notice {
+      background: #fff3e0;
+      border-left: 6px solid #ff9800;
+      padding: 12px 16px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      color: #bf360c;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004d40;
+      margin-bottom: 25px;
+    }
+
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"], input[type="tel"], textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 15px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #26a69a;
+      outline: none;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .inline-button {
+      background: #26a69a;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .inline-button:hover {
+      background: #00796b;
+    }
+
+    .list-area {
+      background: #f1f8e9;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #aed581;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 16px;
+    }
+
+    .delete-btn {
+      background: #ef5350;
+      color: white;
+      border: none;
       border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background: #c62828;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      background: #00796b;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #004d40;
+    }
+
+    .toast {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      z-index: 9999;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100%;
+      width: 300px;
+      background: white;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+      transition: right 0.4s ease;
+      z-index: 2000;
+      padding: 20px;
+      font-size: 16px;
+      overflow-y: auto;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 10px;
+      color: #004d40;
+      font-size: 22px;
+    }
+
+    .sidebar p {
+      line-height: 1.6;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #e57373;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Meadi Aqua Tech</h1>
-    <p>RO Water Purifier Sales & Service - Cuddalore</p>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    🛒 Relax to Order
   </header>
 
-  <div class="hero">
-    <h2>உங்கள் குடிநீரை நம்பிக்கையுடன் பாதுகாக்கும் தீர்வு!</h2>
-    <p>Pure | Clean | Healthy Water</p>
-    <a href="https://wa.me/919344165879">WhatsApp தொடர்பு கொள்ள</a>
+  <main>
+    <form id="orderForm">
+      <h2>உங்கள் தேவைகளை உள்ளிடுங்கள்</h2>
+
+      <label for="itemInput">உங்களுக்கு என்ன தேவை?</label>
+      <input type="text" id="itemInput" placeholder="உதா: பால்,பிரியாணி,மருந்து ">
+      <div class="button-group">
+        <button type="button" class="inline-button" onclick="addItem()">➕ சேர்க்கவும்</button>
+      </div>
+
+      <div class="list-area">
+        <label>📝 வாங்க வேண்டிய பொருட்கள்:</label>
+        <ul id="itemList"></ul>
+      </div>
+
+      <label for="name">👤 பெயர்</label>
+      <input type="text" id="name" required>
+
+      <label for="phone">📱 மொபைல் எண்</label>
+      <input type="tel" id="phone" required pattern="\d{10}" maxlength="10">
+
+      <label for="district">📍 மாவட்டம்</label>
+<select id="district" required onchange="loadTaluks()">
+  <option value="">தேர்வு செய்யவும்</option>
+  <option value="Ariyalur">Ariyalur</option>
+  <option value="Chengalpattu">Chengalpattu</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Coimbatore">Coimbatore</option>
+  <option value="Cuddalore">Cuddalore</option>
+  <option value="Dharmapuri">Dharmapuri</option>
+  <option value="Dindigul">Dindigul</option>
+  <option value="Erode">Erode</option>
+  <option value="Kallakurichi">Kallakurichi</option>
+  <option value="Kancheepuram">Kancheepuram</option>
+  <option value="Kanniyakumari">Kanniyakumari</option>
+  <option value="Karur">Karur</option>
+  <option value="Krishnagiri">Krishnagiri</option>
+  <option value="Madurai">Madurai</option>
+  <option value="Mayiladuthurai">Mayiladuthurai</option>
+  <option value="Nagapattinam">Nagapattinam</option>
+  <option value="Namakkal">Namakkal</option>
+  <option value="Nilgiris">Nilgiris</option>
+  <option value="Perambalur">Perambalur</option>
+  <option value="Pudukkottai">Pudukkottai</option>
+  <option value="Ramanathapuram">Ramanathapuram</option>
+  <option value="Ranipet">Ranipet</option>
+  <option value="Salem">Salem</option>
+  <option value="Sivagangai">Sivagangai</option>
+  <option value="Tenkasi">Tenkasi</option>
+  <option value="Thanjavur">Thanjavur</option>
+  <option value="Theni">Theni</option>
+  <option value="Thiruvallur">Thiruvallur</option>
+  <option value="Thiruvannamalai">Thiruvannamalai</option>
+  <option value="Tiruvarur">Tiruvarur</option>
+  <option value="Thoothukudi">Thoothukudi</option>
+  <option value="Tiruchirappalli">Tiruchirappalli</option>
+  <option value="Tirunelveli">Tirunelveli</option>
+  <option value="Tirupathur">Tirupathur</option>
+  <option value="Tiruppur">Tiruppur</option>
+  <option value="Vellore">Vellore</option>
+  <option value="Villupuram">Villupuram</option>
+  <option value="Virudhunagar">Virudhunagar</option>
+</select>
+      <label for="taluk">🏙️ வட்டம் (Taluk)</label>
+      <select id="taluk" required disabled>
+        <option value="">முதலில் மாவட்டம் தேர்வு செய்யவும்</option>
+      </select>
+
+      <label for="address">🏠 முகவரி</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <label for="note">📌 எதையாவது சொல்லணும்மா ? (Optional)</label>
+      <textarea id="note" rows="2" placeholder="உதா: நான் கேட்ட பொருள் இல்லை என்றால் Call பண்ணுங்க"></textarea>
+
+      <div class="petrol-notice">
+        ⚠️ குறைந்தபட்சமாக ₹100 Service கட்டணம் உள்ளது. இது Final Bill-இல் சேர்க்கப்படும்.
+      </div>
+
+      <button type="submit" class="submit-button">🚚 Order Now - Whatsapp</button>
+    </form>
+  </main>
+
+  <div class="toast" id="toast">Processing Order...</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <h3>📜 Terms & Conditions</h3>
+    <p>
+      1. Service Charge குறைந்த பச்சம் ₹100 கட்டாயம் சேர்க்கப்படும்.<br>
+      2. பொருட்கள் வாடிக்கையாளரால் தேர்ந்தெடுக்கப்பட வேண்டும்.<br>
+      3. Whatsapp மூலம் மட்டுமே ஆர்டர் அனுப்பப்பட வேண்டும்.<br>
+      4. தொடர்பு இல்லாத மொபைல் எண்கள் நிராகரிக்கப்படும்.<br>
+      5. ஆர்டர் அனுப்பிய பிறகு தவிர்க்க முடியாது.<br>
+      6.வண்டியில் போகும்போது கவனத்துடன் போகவேண்டும் எதனாவது அசாம்பாவிதம் நடந்தால் நாங்கள் பொறுப்பு இல்லை
+      <br>
+      <strong>7. சட்டத்துக்கு முரண் ஆனா பொருட்களை வாங்க மாட்டோம்.</strong>
+    </p>
   </div>
 
-  <section>
-    <h3>எங்களை பற்றி</h3>
-    <p>நாங்கள் குடிநீர் சுத்திகரிப்பு இயந்திரங்களை விற்பனை செய்து சேவை வழங்கும் நிறுவனமாக உள்ளோம். உங்கள் வீட்டிற்கும் தொழிற்சாலைக்கும் ஏற்ற RO யூனிட் தேர்ந்தெடுக்க உதவுகிறோம்.</p>
-  </section>
-
-  <section>
-    <h3>எங்கள் Product</h3>
-    <div class="products">
-      <div class="product">
-        <img src="ro_machine_1.jpg" alt="RO Machine 1">
-        <h4>AQUA 2090 MODEL</h4>
-        <p>15 LITRE TANK CAPACITY <br>
-         RO + UV FILTRATION <br>
-         2000 TDS SUPPORT <br>
-         MULTI STAGE PURIFICATION <br>
-         PRICE : ₹ 18,499</p>
-      </div>
-      <div class="product">
-        <img src="ro_machine_2.jpg" alt="RO Machine 2">
-        <h4>AQUA DIAMOND</h4>
-        <p>10 LITRE TANK CAPACITY <br>
-        RO FILTRATION <br>
-        1000 to 1500 TDS SUPPORT <br> 
-        PRICE : ₹ 11,499</p>
-      </div>
-      <div class="product">
-        <img src="ro_machine_3.jpg" alt="RO Machine 3">
-        <h4>AQUA QUEEN</h4>
-        <p>8 LITRE TANK CAPACITY <br> 
-        RO FILTRATION <br> 
-        1000 TDS SUPPORT <br> 
-        PRICE : ₹ 9,499</p>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#eaf4fb; padding: 40px 20px;">
-    <h3 style="text-align:center; color:#023e8a; margin-bottom:30px;">எங்கள் சேவைகள் (SERVICE)</h3>
-    <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px;">
-
-      <div style="background:white; padding:20px; width:280px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-        <h4 style="color:#0077b6;">🛠️ அமைத்தல் (Installation)</h4>
-        <p>வீடு மற்றும் கம்பெனி இடங்களில் RO system அமைத்தல் சேவை.</p>
-      </div>
-
-      <div style="background:white; padding:20px; width:280px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-        <h4 style="color:#0077b6;">🔄 ஃபில்டர் மாற்றம் (Filter)</h4>
-        <p>பழைய ஃபில்டரை புதியதாக மாற்றி தருகிறோம்.</p>
-      </div>
-
-      <div style="background:white; padding:20px; width:280px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-        <h4 style="color:#0077b6;">🧪 நீர் பரிசோதனை</h4>
-        <p>நீர் TDS Quality மற்றும் Purity Test செய்து தருகிறோம்.</p>
-      </div>
-
-      <div style="background:white; padding:20px; width:280px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-        <h4 style="color:#0077b6;">🔧 பொதுப்பராமரிப்பு</h4>
-        <p>RO பிழைகள், பழுதுகள், Any Complain அனைத்தும் சரிசெய்தல்.</p>
-      </div>
-
-      <div style="background:white; padding:20px; width:280px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-        <h4 style="color:#0077b6;">📅 AMC (Annual Maintenance)</h4>
-        <p>வருடாந்திர பராமரிப்பு ஒப்பந்தம் மூலம் திட்டமிட்ட பராமரிப்பு.</p>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-      <a href="tel:9344165879" style="background:#0077b6; color:white; padding:12px 25px; border-radius:8px; text-decoration:none;">
-        📞 தொடர்புகொள்ள - 9344165879
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Meadi Aqua Tech. All rights reserved.</p>
-  </footer>
-
-  <a id="whatsappButton" href="https://wa.me/919344165879" target="_blank">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp">
-  </a>
-
   <script>
-    const button = document.getElementById("whatsappButton");
-    let isDragging = false;
-    let currentX = 0, currentY = 0;
-    let initialX, initialY;
-    let xOffset = 0, yOffset = 0;
+    const itemInput = document.getElementById('itemInput');
+    const itemList = document.getElementById('itemList');
+    const toast = document.getElementById('toast');
+    let addedItems = [];
 
-    const setTranslate = (xPos, yPos, el) => {
-      el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
-    };
+  const talukData = {
+  "Ariyalur": ["Andimadam", "Ariyalur", "Sendurai", "Udayarpalayam"],
+  "Chengalpattu": ["Chengalpattu", "Cheyyur", "Madurantakam", "Pallavaram", "Tambaram", "Thirukalukundram", "Thiruporur", "Vandalur"],
+  "Chennai": ["Ambattur", "Aminjikarai", "Ayanavaram", "Egmore", "Guindy", "Madhavaram", "Maduravoyal", "Mambalam", "Mylapore", "Purasawalkam", "Perambur", "Thiruvottiyur", "Tondiarpet", "Velachery"],
+  "Coimbatore": ["Anaimalai", "Annur", "Coimbatore North", "Coimbatore South", "Kinathukadavu", "Madukarai", "Mettupalayam", "Perur", "Pollachi", "Sulur", "Valparai"],
+  "Cuddalore": ["Bhuvanagiri", "Chidambaram", "Cuddalore", "Kattumannarkoil", "Kurinjipadi", "Panruti", "Srimushnam", "Titagudi", "Veppur", "Vriddachalam"],
+  "Dharmapuri": ["Dharmapuri", "Harur", "Karimangalam", "Nallampalli", "Palacode", "Pappireddipatti", "Pennagaram"],
+  "Dindigul": ["Athoor", "Dindigul East", "Dindigul West", "Gujiliamparai", "Kodaikanal", "Natham", "Nilakottai", "Oddanchatram", "Palani", "Vedasandur"],
+  "Erode": ["Anthiyur", "Bhavani", "Erode", "Gobichettipalayam", "Kodumudi", "Modakkurichi", "Nambiyur", "Perundurai", "Sathyamangalam", "Thalavadi"],
+  "Kallakurichi": ["Chinnaselam", "Kallakurichi", "Kalvarayan Hills", "Sankarapuram", "Tirukoilur", "Ulundurpet"],
+  "Kancheepuram": ["Kancheepuram", "Kundrathur", "Sriperumbudur", "Uthiramerur", "Walajabad"],
+  "Kanniyakumari": ["Agastheeswaram", "Kalkulam", "Killiyoor", "Thiruvattar", "Thovalai", "Vilavancode"],
+  "Karur": ["Aravakurichi", "Kadavur", "Krishnarayapuram", "Kulithalai", "Manmangalam", "Pugalur"],
+  "Krishnagiri": ["Anchetty", "Bargur", "Denkanikottai", "Hosur", "Pochampalli", "Shoolagiri", "Uthangarai"],
+  "Madurai": ["Madurai North", "Madurai South", "Madurai East", "Madurai West", "Melur", "Peraiyur", "Thiruparankundram", "Thirumangalam", "Usilampatti", "Vadipatti"],
+  "Mayiladuthurai": ["Kuthalam", "Mayiladuthurai", "Sirkazhi", "Tharangambadi"],
+  "Nagapattinam": ["Kilvelur", "Nagapattinam", "Thirukkuvalai", "Vedaranyam"],
+  "Namakkal": ["Kolli Hills", "Mohanur", "Namakkal", "Rasipuram", "Sendamangalam"],
+  "Nilgiris": ["Coonoor", "Gudalur", "Kotagiri", "Kundah", "Pandalur", "Udhagai"],
+  "Perambalur": ["Alathur", "Kunnam", "Perambalur", "Veppanthattai"],
+  "Pudukkottai": ["Alangudi", "Aranthangi", "Avudaiyarkoil", "Gandarvakottai", "Illuppur", "Karambakudi", "Manamelkudi", "Ponnamaravathi", "Pudukkottai", "Thirumayam", "Viralimalai"],
+  "Ramanathapuram": ["Kadaladi", "Kamuthi", "Keelakarai", "Mudukulathur", "Paramakudi", "Rajasingamangalam", "Rameswaram", "Ramanathapuram", "Thiruvadanai"],
+  "Ranipet": ["Arakkonam", "Arcot", "Kalavai", "Nemili", "Sholingur", "Walajah"],
+  "Salem": ["Salem", "Salem South", "Salem West", "Yercaud", "Vazhapadi", "Attur", "Gangavalli", "Peddanayakkanpalayam", "Thalaivasal", "Mettur", "Omalur", "Kadayampatti", "Sangagiri", "Edappadi"],
+  "Sivagangai": ["Devakottai", "Ilayankudi", "Karaikudi", "Manamadurai", "Singampunari", "Sivagangai", "Thirupuvanam"],
+  "Tenkasi": ["Alangulam", "Kadayanallur", "Sankarankovil", "Shenkottai", "Sivagiri", "Thiruvengadam", "Veerakeralampudur"],
+  "Thanjavur": ["Boothalur", "Kumbakonam", "Orathanadu", "Papanasam", "Pattukottai", "Peravurani", "Thiruvidaimaruthur", "Thiruvaiyaru"],
+  "Theni": ["Aandipatti", "Bodinayakanur", "Periyakulam", "Uthamapalayam"],
+  "Thiruvallur": ["Avadi", "Gummidipoondi", "Pallipattu", "Ponneri", "Poonamallee", "R.K. Pet", "Tiruthani", "Uthukottai"],
+  "Thiruvannamalai": ["Arni", "Chengam", "Chetpet", "Cheyyar", "Jamunamarathur", "Kalasapakkam", "Kilpennathur", "Polur", "Thandramet", "Vandavasi", "Vembakkam"],
+  "Tiruvarur": ["Koothanallur", "Kudavasal", "Mannargudi", "Nannilam", "Needamangalam", "Thiruthuraipoondi", "Thiruvarur", "Valangaiman", "Muthupet"],
+  "Thoothukudi": ["Eral", "Ettayapuram", "Kayathar", "Kovilpatti", "Ottapidaram", "Sattankulam", "Srivaikundam", "Tiruchendur", "Vilathikulam"],
+  "Tiruchirappalli": ["Lalgudi", "Manachanallur", "Manapparai", "Marungapuri", "Musiri", "Srirangam", "Thottiam", "Thuraiyur", "Tiruchirappalli East", "Tiruchirappalli West", "Tiruverumbur"],
+  "Tirunelveli": ["Ambasamudram", "Cheranmahadevi", "Manur", "Nanguneri", "Palayamkottai", "Radhapuram", "Thisayanvilai"],
+  "Tirupathur": ["Ambur", "Natrampalli", "Vaniyambadi"],
+  "Tiruppur": ["Avinashi", "Dharapuram", "Kangeyam", "Madathukulam", "Oothukuli", "Palladam", "Tiruppur North", "Tiruppur South", "Udumalaipettai"],
+  "Vellore": ["Aanikattu", "Gudiyatham", "Katpadi", "Pernambut"],
+  "Villupuram": ["Gingee", "Kandachipuram", "Marakanam", "Melmalaiyanur", "Thiruvennainallur", "Tindivanam", "Vanur", "Vikravandi"],
+  "Virudhunagar": ["Aruppukottai", "Kariyapatti", "Rajapalayam", "Sathur", "Sivakasi", "Srivilliputhur", "Tiruchuli", "Vembakottai", "Watrap"]
+};
+    function loadTaluks() {
+      const district = document.getElementById("district").value;
+      const taluk = document.getElementById("taluk");
+      taluk.innerHTML = "";
 
-    const dragStart = (e) => {
-      isDragging = true;
-      initialX = e.type === "touchstart" ? e.touches[0].clientX - xOffset : e.clientX - xOffset;
-      initialY = e.type === "touchstart" ? e.touches[0].clientY - yOffset : e.clientY - yOffset;
-    };
+      if (!district) {
+        taluk.disabled = true;
+        taluk.innerHTML = `<option value="">முதலில் மாவட்டம் தேர்வு செய்யவும்</option>`;
+        return;
+      }
 
-    const dragEnd = () => {
-      isDragging = false;
-      xOffset = currentX;
-      yOffset = currentY;
-    };
+      taluk.disabled = false;
+      talukData[district].forEach(t => {
+        const opt = document.createElement("option");
+        opt.value = t;
+        opt.textContent = t;
+        taluk.appendChild(opt);
+      });
+    }
 
-    const drag = (e) => {
-      if (!isDragging) return;
+    function addItem() {
+      const item = itemInput.value.trim();
+      if (item) {
+        addedItems.push(item);
+        renderList();
+        itemInput.value = '';
+      }
+    }
+
+    function renderList() {
+      itemList.innerHTML = '';
+      addedItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        const row = document.createElement('div');
+        row.classList.add('item-row');
+        row.textContent = item;
+
+        const delBtn = document.createElement('button');
+        delBtn.classList.add('delete-btn');
+        delBtn.textContent = '×';
+        delBtn.onclick = () => {
+          addedItems.splice(index, 1);
+          renderList();
+        };
+
+        row.appendChild(delBtn);
+        li.appendChild(row);
+        itemList.appendChild(li);
+      });
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
-      const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
-      currentX = clientX - initialX;
-      currentY = clientY - initialY;
-      setTranslate(currentX, currentY, button);
-    };
+      if (addedItems.length === 0) {
+        alert("முதலில் குறைந்தபட்சம் ஒரு பொருள் சேர்க்கவும்.");
+        return;
+      }
 
-    button.addEventListener("mousedown", dragStart);
-    button.addEventListener("mouseup", dragEnd);
-    button.addEventListener("mousemove", drag);
-    button.addEventListener("mouseleave", dragEnd);
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const note = document.getElementById('note').value;
+      const district = document.getElementById('district').value;
+      const taluk = document.getElementById('taluk').value;
 
-    button.addEventListener("touchstart", dragStart, { passive: false });
-    button.addEventListener("touchend", dragEnd);
-    button.addEventListener("touchmove", drag, { passive: false });
+      if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+        alert("தயவுசெய்து சரியான 10 இலக்க மொபைல் எண் உள்ளிடவும்.");
+        return;
+      }
+
+      let itemText = 'வாங்க வேண்டிய பொருட்கள்:';
+      addedItems.forEach((item, i) => {
+        itemText += `\n${i + 1}. ${item}`;
+      });
+
+      const message = `🛒 புதிய ஆர்டர்:\n${itemText}\n\n👤 பெயர்: ${name}\n📱 எண்: ${phone}\n📍 மாவட்டம்: ${district}\n🏙️ வட்டம்: ${taluk}\n🏠 முகவரி:\n${address}\n\n📌 குறிப்பு:\n${note || 'எதுவும் குறிப்பிடவில்லை'}\n\n⚠️ குறைந்தபட்சமாக ₹100 பெட்ரோல் கட்டணம் உள்ளது. இது Final Bill-இல் சேர்க்கப்படும்.`;
+
+      const whatsappLink = `https://wa.me/919344165879?text=${encodeURIComponent(message)}`;
+      showToast();
+      setTimeout(() => {
+        window.location.href = whatsappLink;
+      }, 1200);
+    });
+
+    function showToast() {
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 2500);
+    }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
   </script>
-
 </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
