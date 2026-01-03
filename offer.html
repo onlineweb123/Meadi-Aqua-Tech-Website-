@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Meadi Aqua Tech Offer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            background-color: #f0faff; 
+            margin: 0; padding: 10px;
+            display: block; /* மொபைல் ஸ்க்ரோலிங்கிற்கு சிறந்தது */
+        }
+        
+        .container { 
+            width: 100%; max-width: 400px; 
+            background: white; padding: 20px; 
+            border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 { color: #01579b; margin-top: 0; font-size: 28px; }
+        p { margin-bottom: 10px; line-height: 1.5; }
+
+        .wheel-outer { position: relative; width: 280px; height: 280px; margin: 15px auto; flex-shrink: 0; }
+        #wheel { 
+            width: 100%; height: 100%; border-radius: 50%; border: 6px solid #333;
+            background: conic-gradient(
+                #FF5733 0deg 30deg, #3498DB 30deg 60deg, #F1C40F 60deg 90deg, 
+                #9B59B6 90deg 120deg, #E67E22 120deg 150deg, #2ECC71 150deg 180deg,
+                #E74C3C 180deg 210deg, #1ABC9C 210deg 240deg, #34495E 240deg 270deg,
+                #FFC0CB 270deg 300deg, #8E44AD 300deg 330deg, #27AE60 330deg 360deg
+            );
+            transition: transform 5s cubic-bezier(0.1, 0, 0.1, 1);
+        }
+
+        .arrow { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 30px solid #d32f2f; z-index: 10; }
+        .wheel-center { position: absolute; top: 50%; left: 50%; width: 25px; height: 25px; background: white; border: 3px solid #333; border-radius: 50%; transform: translate(-50%, -50%); z-index: 5; }
+        
+        button { width: 100%; padding: 15px; font-size: 18px; cursor: pointer; background-color: #01579b; color: white; border: none; border-radius: 12px; font-weight: bold; margin-top: 15px; outline: none; }
+        button:disabled { background-color: #ccc !important; cursor: not-allowed; }
+        
+        #result { margin-top: 15px; font-weight: bold; font-size: 18px; min-height: 40px; }
+
+        /* மொபைல் டிக்கெட் டிசைன் */
+        #ticket-area {
+            display: none; 
+            width: 320px; height: 180px; /* பிக்சட் ரேஷியோ */
+            background: linear-gradient(135deg, #01579b 0%, #0288d1 100%);
+            color: white; border-radius: 15px;
+            padding: 15px; margin: 20px auto;
+            position: relative; overflow: hidden;
+            border: 3px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+        #ticket-area::after {
+            content: "✓"; position: absolute; right: -15px; bottom: -20px;
+            font-size: 120px; color: rgba(255,255,255,0.1);
+        }
+        .ticket-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+        .ticket-offer { font-size: 18px; color: #ffeb3b; font-weight: bold; margin: 5px 0; }
+        .ticket-code { background: white; color: #01579b; padding: 4px 10px; border-radius: 5px; font-weight: bold; display: inline-block; margin: 8px 0; font-size: 14px; }
+        .ticket-info { font-size: 13px; line-height: 1.4; }
+
+        .action-btns { display: none; width: 100%; margin-top: 10px; }
+        .download-btn { background-color: #f39c12; margin-bottom: 12px; }
+        .whatsapp-btn { background-color: #25D366; text-decoration: none; padding: 15px; color: white; border-radius: 12px; font-weight: bold; display: block; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Meadi Aqua Tech</h1>
+    <p>சக்கரத்தைச் சுழற்றுங்கள்! <br><b><span style="color: #3498DB;">நீல நிறத்தில்</span></b> நின்றால் Filter Free Service!</p>
+    
+    <div class="wheel-outer">
+        <div class="arrow"></div>
+        <div class="wheel-center"></div>
+        <div id="wheel"></div>
+    </div>
+    
+    <button id="spinBtn" onclick="spinWheel()">SPIN TO WIN</button>
+    <div id="result"></div>
+
+    <div id="ticket-area">
+        <div class="ticket-title">Meadi Aqua Tech</div>
+        <div style="font-size: 12px; opacity: 0.9;">வெற்றி Card</div>
+        <div class="ticket-offer">Filter Free Service</div>
+        <div class="ticket-code" id="display-code">CODE: XXXX</div>
+        <div class="ticket-info">
+            📞 Phone: 9344165879 <br>
+            <span style="font-size: 10px;">*இந்த Photo காட்டினால் Free Service உண்டு</span>
+        </div>
+    </div>
+
+    <div class="action-btns" id="action-btns">
+        <button class="download-btn" onclick="downloadTicket()">Download Ticket (Photo)</button>
+        <a id="waLink" class="whatsapp-btn" href="#" target="_blank">WhatsApp-ல் அனுப்பவும்</a>
+    </div>
+</div>
+
+<script>
+    let canSpin = true;
+
+    function spinWheel() {
+        if (!canSpin) return;
+        
+        const wheel = document.getElementById('wheel');
+        const result = document.getElementById('result');
+        const spinBtn = document.getElementById('spinBtn');
+        const actionBtns = document.getElementById('action-btns');
+        const ticketArea = document.getElementById('ticket-area');
+        
+        // வெற்றி வாய்ப்பு
+        const chance = Math.floor(Math.random() * 100) + 1;
+        let landingDeg = 0;
+        let isWinner = false;
+
+        if (chance <= 20) { 
+            landingDeg = 45; // நீலம்
+            isWinner = true;
+        } else {
+            const otherAngles = [15, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345];
+            landingDeg = otherAngles[Math.floor(Math.random() * otherAngles.length)];
+            isWinner = false;
+        }
+
+        const totalSpin = 3600 + landingDeg; 
+        wheel.style.transform = `rotate(-${totalSpin}deg)`;
+        
+        canSpin = false;
+        spinBtn.disabled = true;
+        result.innerText = "சக்கரம் சுழல்கிறது... 🤞";
+        result.style.color = "#333";
+
+        setTimeout(() => {
+            if (isWinner) {
+                const code = "AQUA-" + Math.floor(1000 + Math.random() * 9000);
+                result.innerHTML = "வாழ்த்துகள்! 🎉 <br> உங்கள் வெற்றிக்கான <br> இலவச சர்வீஸ் கிடைத்துள்ளது!";
+                result.style.color = "#3498DB";
+                
+                document.getElementById('display-code').innerText = "CODE: " + code;
+                ticketArea.style.display = "block";
+                actionBtns.style.display = "block";
+                
+                // தானாக டிக்கெட் இருக்கும் இடத்திற்கு ஸ்க்ரோல் செய்ய
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                
+                setupWhatsApp(code);
+            } else {
+                result.innerText = "மிஸ் ஆகிவிட்டது! மீண்டும் முயலுங்கள்! 🔄";
+                result.style.color = "#e74c3c";
+                spinBtn.disabled = false;
+                canSpin = true;
+            }
+        }, 5100);
+    }
+
+    function setupWhatsApp(code) {
+        const myNumber = "919344165879"; 
+        const msg = `வணக்கம், நான் Meadi Aqua Tech Game இல் வெற்றி பெற்றுள்ளேன். எனது Filter Free Service கூப்பன்: ${code}.`;
+        document.getElementById('waLink').href = `https://wa.me/${myNumber}?text=${encodeURIComponent(msg)}`;
+    }
+
+    function downloadTicket() {
+        const ticket = document.getElementById('ticket-area');
+        // html2canvas-ல் மொபைல் கிளாரிட்டிக்கு scale சேர்த்துள்ளேன்
+        html2canvas(ticket, { 
+            scale: 3, 
+            useCORS: true,
+            backgroundColor: null 
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'Meadi-Aqua-Ticket.png';
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        });
+    }
+</script>
+
+</body>
+</html>
